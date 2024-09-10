@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -17,6 +18,8 @@ public class server {
 
 
     public static void main(String[] args) throws UnknownHostException {
+        InetAddress myAddress = InetAddress.getLocalHost();
+        System.out.println(myAddress.getHostAddress());
         JFrame frame = new JFrame("Live Stream");
         JLabel[] subFrames = new JLabel[4];
         JButton[] buttons = new JButton[4];
